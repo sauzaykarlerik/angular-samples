@@ -1,0 +1,10 @@
+<!-- hide block until hero is initialized -->
+<div *ngIf="hero">
+  <h2>{{hero.name}} details!</h2>
+  <div><label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <!-- [(ngModel)] allow two-way binding, needs FormsModule import (app.module.ts)-->
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </div>
+</div>
