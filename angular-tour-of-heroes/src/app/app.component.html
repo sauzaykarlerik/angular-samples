@@ -1,11 +1,6 @@
 <h1>{{title}}</h1>
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <!-- (click) identify the <li> element's click event as the target -->
-  <!-- Expression adds / removes the class "selected" -->
-  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-<!-- Must declare a target binding property [hero] to be an input property -->
-<hero-detail [hero]="selectedHero"></hero-detail>
+<nav>
+ <a routerLink="/dashboard">Dashboard</a>
+ <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
